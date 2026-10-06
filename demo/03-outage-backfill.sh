@@ -44,15 +44,17 @@ PY
 RC=${RC:-0}
 echo
 banner "Edge agent remote_write metrics (via API proxy to prometheus-edge:9090)"
+# Agent mode has no query API, so read its /metrics text and sum the series.
+AGENT_METRICS=$(kc get --raw "/api/v1/namespaces/edge/services/prometheus-edge:9090/proxy/metrics" 2>/dev/null || true)
 for m in prometheus_remote_storage_samples_pending prometheus_remote_storage_samples_retried_total prometheus_remote_storage_samples_failed_total prometheus_remote_storage_samples_total; do
-  v=$(python3 - "$m" <<'PY' 2>/dev/null || true
-import sys, json, subprocess, urllib.parse
-p = "/api/v1/namespaces/edge/services/prometheus-edge:9090/proxy/api/v1/query?" + urllib.parse.urlencode({"query": "sum(%s)" % sys.argv[1]})
-out = subprocess.run(["kubectl", "--context", "k3d-edge-cloud", "get", "--raw", p], capture_output=True, text=True).stdout
-r = json.loads(out)["data"]["result"]
-print(r[0]["value"][1] if r else "n/a")
-PY
-)
+  v=$(printf '%s\n' "$AGENT_METRICS" | python3 -c '
+import sys
+name = sys.argv[1]; vals = []
+for line in sys.stdin:
+    if line.startswith(name + "{") or line.startswith(name + " "):
+        vals.append(float(line.rsplit(" ", 1)[1]))
+print("%g" % sum(vals) if vals else "")
+' "$m" 2>/dev/null || true)
   printf '  %-58s %s\n' "$m" "${v:-unavailable}"
 done
 [ "$RC" -eq 0 ] && pass "no gaps in the outage window: edge buffered and backfilled" || fail "gaps found in outage window (see ranges above)"
