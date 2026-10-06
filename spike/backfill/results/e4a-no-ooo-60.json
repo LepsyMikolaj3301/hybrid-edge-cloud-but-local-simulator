@@ -1,0 +1,352 @@
+{
+ "gaps_rel_outage_begin_s": [],
+ "outage_len_s": 60.9,
+ "timeline_t_lag_pending": [
+  [
+   0,
+   0.0,
+   0.0
+  ],
+  [
+   5,
+   0.0,
+   0.0
+  ],
+  [
+   10,
+   2.0,
+   6.0
+  ],
+  [
+   15,
+   0.0,
+   0.0
+  ],
+  [
+   20,
+   0.0,
+   0.0
+  ],
+  [
+   25,
+   0.0,
+   0.0
+  ],
+  [
+   30,
+   0.0,
+   0.0
+  ],
+  [
+   35,
+   0.0,
+   0.0
+  ],
+  [
+   40,
+   0.0,
+   0.0
+  ],
+  [
+   45,
+   0.0,
+   0.0
+  ],
+  [
+   50,
+   0.0,
+   0.0
+  ],
+  [
+   55,
+   0.0,
+   0.0
+  ],
+  [
+   60,
+   0.0,
+   0.0
+  ],
+  [
+   65,
+   0.0,
+   0.0
+  ],
+  [
+   70,
+   0.0,
+   0.0
+  ],
+  [
+   75,
+   0.0,
+   0.0
+  ],
+  [
+   80,
+   0.0,
+   0.0
+  ],
+  [
+   85,
+   0.0,
+   0.0
+  ],
+  [
+   91,
+   2.0,
+   6.0
+  ],
+  [
+   96,
+   6.0,
+   18.0
+  ],
+  [
+   101,
+   12.0,
+   36.0
+  ],
+  [
+   106,
+   16.0,
+   48.0
+  ],
+  [
+   111,
+   22.0,
+   66.0
+  ],
+  [
+   116,
+   26.0,
+   78.0
+  ],
+  [
+   121,
+   32.0,
+   96.0
+  ],
+  [
+   126,
+   36.0,
+   108.0
+  ],
+  [
+   131,
+   42.0,
+   126.0
+  ],
+  [
+   136,
+   46.0,
+   138.0
+  ],
+  [
+   141,
+   52.0,
+   156.0
+  ],
+  [
+   146,
+   56.0,
+   168.0
+  ],
+  [
+   152,
+   64.0,
+   192.0
+  ],
+  [
+   157,
+   0.0,
+   0.0
+  ],
+  [
+   162,
+   2.0,
+   6.0
+  ],
+  [
+   167,
+   0.0,
+   0.0
+  ],
+  [
+   172,
+   2.0,
+   6.0
+  ],
+  [
+   177,
+   0.0,
+   0.0
+  ],
+  [
+   182,
+   2.0,
+   6.0
+  ],
+  [
+   187,
+   0.0,
+   0.0
+  ],
+  [
+   192,
+   2.0,
+   6.0
+  ],
+  [
+   197,
+   0.0,
+   0.0
+  ],
+  [
+   202,
+   2.0,
+   6.0
+  ],
+  [
+   207,
+   0.0,
+   0.0
+  ],
+  [
+   212,
+   2.0,
+   6.0
+  ],
+  [
+   217,
+   0.0,
+   0.0
+  ],
+  [
+   222,
+   2.0,
+   6.0
+  ],
+  [
+   227,
+   0.0,
+   0.0
+  ],
+  [
+   233,
+   2.0,
+   6.0
+  ],
+  [
+   238,
+   0.0,
+   0.0
+  ],
+  [
+   243,
+   2.0,
+   6.0
+  ],
+  [
+   248,
+   0.0,
+   0.0
+  ]
+ ],
+ "name": "e4a-no-ooo-60",
+ "params": {
+  "idx": "6",
+  "mode": "stop",
+  "ooo": "0"
+ },
+ "events": [
+  [
+   "start",
+   1791320391.3922637
+  ],
+  [
+   "outage_begin",
+   1791320481.4009588
+  ],
+  [
+   "outage_end",
+   1791320542.2896545
+  ],
+  [
+   "measure",
+   1791320643.6608589
+  ]
+ ],
+ "samples_in_cloud": 123,
+ "first_sample_delay_vs_start_s": 5.974295139312744,
+ "raw_missing_scrapes_by_region": {
+  "pre": 0,
+  "outage": 0,
+  "post": 0
+ },
+ "max_gap_s": 0,
+ "qr_total_steps": 125,
+ "qr_missing_steps": 4,
+ "qr_missing_by_region": {
+  "pre": 4,
+  "outage": 0,
+  "post": 0
+ },
+ "agent_before_restore": {
+  "prometheus_agent_out_of_order_samples_total": 0.0,
+  "prometheus_remote_storage_highest_timestamp_in_seconds": 1791320541.0,
+  "prometheus_remote_storage_queue_highest_sent_timestamp_seconds{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\"}": 1791320479.0,
+  "prometheus_remote_storage_samples_failed_total{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\"}": 0.0,
+  "prometheus_remote_storage_samples_pending{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\"}": 186.0,
+  "prometheus_remote_storage_samples_retried_total{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\"}": 24.0,
+  "prometheus_remote_storage_samples_total{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\"}": 282.0,
+  "prometheus_remote_storage_shards{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\"}": 1.0,
+  "prometheus_remote_storage_shards_desired{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\"}": 0.0025746639268943616,
+  "prometheus_remote_storage_shards_max{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\"}": 50.0,
+  "prometheus_remote_storage_shards_min{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\"}": 1.0
+ },
+ "agent_end": {
+  "prometheus_agent_out_of_order_samples_total": 0.0,
+  "prometheus_remote_storage_highest_timestamp_in_seconds": 1791320641.0,
+  "prometheus_remote_storage_queue_highest_sent_timestamp_seconds{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\"}": 1791320641.0,
+  "prometheus_remote_storage_samples_failed_total{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\"}": 0.0,
+  "prometheus_remote_storage_samples_in_total": 738.0,
+  "prometheus_remote_storage_samples_pending{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\"}": 0.0,
+  "prometheus_remote_storage_samples_retried_total{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\"}": 30.0,
+  "prometheus_remote_storage_samples_total{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\"}": 768.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\",le=\"0.005\"}": 96.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\",le=\"0.01\"}": 96.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\",le=\"0.025\"}": 96.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\",le=\"0.05\"}": 96.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\",le=\"0.1\"}": 96.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\",le=\"0.25\"}": 96.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\",le=\"0.5\"}": 96.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\",le=\"1\"}": 96.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\",le=\"2.5\"}": 96.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\",le=\"5\"}": 97.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\",le=\"10\"}": 98.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\",le=\"25\"}": 98.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\",le=\"60\"}": 101.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\",le=\"120\"}": 101.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\",le=\"300\"}": 101.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\",le=\"+Inf\"}": 101.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_sum{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\"}": 100.83880160399998,
+  "prometheus_remote_storage_sent_batch_duration_seconds_count{remote_name=\"d28c4e\",url=\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\"}": 101.0
+ },
+ "cloud_end": {
+  "prometheus_remote_storage_exemplars_in_total": 0.0,
+  "prometheus_remote_storage_highest_timestamp_in_seconds": 1791320641.0,
+  "prometheus_remote_storage_histograms_in_total": 0.0,
+  "prometheus_remote_storage_samples_in_total": 498.0,
+  "prometheus_remote_storage_string_interner_zero_reference_releases_total": 0.0,
+  "prometheus_tsdb_head_out_of_order_samples_appended_total{type=\"float\"}": 0.0,
+  "prometheus_tsdb_head_out_of_order_samples_appended_total{type=\"histogram\"}": 0.0,
+  "prometheus_tsdb_head_samples_appended_total{type=\"float\"}": 486.0,
+  "prometheus_tsdb_head_samples_appended_total{type=\"histogram\"}": 0.0,
+  "prometheus_tsdb_out_of_bound_samples_total{type=\"float\"}": 0.0,
+  "prometheus_tsdb_out_of_order_samples_total{type=\"float\"}": 0.0,
+  "prometheus_tsdb_out_of_order_samples_total{type=\"histogram\"}": 0.0
+ },
+ "cloud_log": "time=2026-10-06T21:01:21.462Z level=WARN source=main.go:1075 msg=\"Received an OS signal, exiting gracefully...\" signal=terminated",
+ "agent_log": "time=2026-10-06T21:01:21.667Z level=WARN source=queue_manager.go:2027 msg=\"Failed to send batch, retrying\" component=remote remote_name=d28c4e url=http://bf-e4a-no-ooo-60-tox:9091/api/v1/write err=\"Post \\\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\\\": read tcp 172.19.0.5:59424->172.19.0.3:9091: re\ntime=2026-10-06T21:02:22.668Z level=WARN source=queue_manager.go:2027 msg=\"Failed to send batch, retrying\" component=remote remote_name=d28c4e url=http://bf-e4a-no-ooo-60-tox:9091/api/v1/write err=\"Post \\\"http://bf-e4a-no-ooo-60-tox:9091/api/v1/write\\\": context deadline exceeded\""
+}

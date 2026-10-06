@@ -1,0 +1,366 @@
+{
+ "gaps_rel_outage_begin_s": [
+  [
+   -0.9,
+   49.0
+  ]
+ ],
+ "outage_len_s": 31.8,
+ "timeline_t_lag_pending": [
+  [
+   0,
+   0.0,
+   0.0
+  ],
+  [
+   5,
+   0.0,
+   0.0
+  ],
+  [
+   10,
+   0.0,
+   0.0
+  ],
+  [
+   15,
+   0.0,
+   0.0
+  ],
+  [
+   20,
+   0.0,
+   0.0
+  ],
+  [
+   25,
+   0.0,
+   0.0
+  ],
+  [
+   30,
+   0.0,
+   0.0
+  ],
+  [
+   35,
+   0.0,
+   0.0
+  ],
+  [
+   40,
+   0.0,
+   0.0
+  ],
+  [
+   45,
+   0.0,
+   0.0
+  ],
+  [
+   50,
+   0.0,
+   0.0
+  ],
+  [
+   55,
+   0.0,
+   0.0
+  ],
+  [
+   60,
+   0.0,
+   0.0
+  ],
+  [
+   65,
+   0.0,
+   0.0
+  ],
+  [
+   70,
+   0.0,
+   0.0
+  ],
+  [
+   75,
+   0.0,
+   0.0
+  ],
+  [
+   80,
+   0.0,
+   0.0
+  ],
+  [
+   85,
+   0.0,
+   0.0
+  ],
+  [
+   92,
+   2.0,
+   6.0
+  ],
+  [
+   97,
+   6.0,
+   18.0
+  ],
+  [
+   102,
+   12.0,
+   36.0
+  ],
+  [
+   107,
+   16.0,
+   48.0
+  ],
+  [
+   112,
+   22.0,
+   66.0
+  ],
+  [
+   117,
+   26.0,
+   78.0
+  ],
+  [
+   134,
+   0.0,
+   0.0
+  ],
+  [
+   139,
+   1791320531.0,
+   6.0
+  ],
+  [
+   144,
+   1791320535.0,
+   18.0
+  ],
+  [
+   149,
+   1791320541.0,
+   36.0
+  ],
+  [
+   153,
+   1791320545.0,
+   48.0
+  ],
+  [
+   158,
+   0.0,
+   0.0
+  ],
+  [
+   163,
+   2.0,
+   6.0
+  ],
+  [
+   168,
+   0.0,
+   0.0
+  ],
+  [
+   173,
+   2.0,
+   6.0
+  ],
+  [
+   178,
+   0.0,
+   0.0
+  ],
+  [
+   183,
+   2.0,
+   6.0
+  ],
+  [
+   188,
+   0.0,
+   0.0
+  ],
+  [
+   193,
+   2.0,
+   6.0
+  ],
+  [
+   198,
+   0.0,
+   0.0
+  ],
+  [
+   203,
+   2.0,
+   6.0
+  ],
+  [
+   208,
+   0.0,
+   0.0
+  ],
+  [
+   213,
+   2.0,
+   6.0
+  ],
+  [
+   218,
+   0.0,
+   0.0
+  ],
+  [
+   223,
+   2.0,
+   6.0
+  ],
+  [
+   228,
+   0.0,
+   0.0
+  ],
+  [
+   233,
+   2.0,
+   6.0
+  ],
+  [
+   238,
+   0.0,
+   0.0
+  ],
+  [
+   243,
+   2.0,
+   6.0
+  ],
+  [
+   248,
+   0.0,
+   0.0
+  ]
+ ],
+ "name": "e5a-restart-tmpfs",
+ "params": {
+  "idx": "8",
+  "mode": "stop",
+  "agent_restart": "1",
+  "agent_store": "tmpfs"
+ },
+ "events": [
+  [
+   "start",
+   1791320392.6669424
+  ],
+  [
+   "outage_begin",
+   1791320482.6758342
+  ],
+  [
+   "agent_restart",
+   1791320514.5059476
+  ],
+  [
+   "outage_end",
+   1791320544.5082278
+  ],
+  [
+   "measure",
+   1791320645.8319945
+  ]
+ ],
+ "samples_in_cloud": 100,
+ "first_sample_delay_vs_start_s": 4.965950965881348,
+ "raw_missing_scrapes_by_region": {
+  "pre": 0,
+  "outage": 24,
+  "post": 0
+ },
+ "max_gap_s": 49.87299990653992,
+ "qr_total_steps": 125,
+ "qr_missing_steps": 27,
+ "qr_missing_by_region": {
+  "pre": 3,
+  "outage": 16,
+  "post": 8
+ },
+ "agent_before_restore": {
+  "prometheus_agent_out_of_order_samples_total": 0.0,
+  "prometheus_remote_storage_highest_timestamp_in_seconds": 1791320543.0,
+  "prometheus_remote_storage_queue_highest_sent_timestamp_seconds{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\"}": 0.0,
+  "prometheus_remote_storage_samples_failed_total{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\"}": 0.0,
+  "prometheus_remote_storage_samples_pending{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\"}": 42.0,
+  "prometheus_remote_storage_samples_retried_total{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\"}": 24.0,
+  "prometheus_remote_storage_samples_total{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\"}": 30.0,
+  "prometheus_remote_storage_shards{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\"}": 1.0,
+  "prometheus_remote_storage_shards_desired{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\"}": 1.0,
+  "prometheus_remote_storage_shards_max{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\"}": 50.0,
+  "prometheus_remote_storage_shards_min{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\"}": 1.0
+ },
+ "agent_end": {
+  "prometheus_agent_out_of_order_samples_total": 0.0,
+  "prometheus_remote_storage_highest_timestamp_in_seconds": 1791320645.0,
+  "prometheus_remote_storage_queue_highest_sent_timestamp_seconds{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\"}": 1791320643.0,
+  "prometheus_remote_storage_samples_failed_total{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\"}": 0.0,
+  "prometheus_remote_storage_samples_in_total": 348.0,
+  "prometheus_remote_storage_samples_pending{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\"}": 6.0,
+  "prometheus_remote_storage_samples_retried_total{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\"}": 36.0,
+  "prometheus_remote_storage_samples_total{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\"}": 378.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\",le=\"0.005\"}": 51.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\",le=\"0.01\"}": 51.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\",le=\"0.025\"}": 51.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\",le=\"0.05\"}": 51.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\",le=\"0.1\"}": 51.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\",le=\"0.25\"}": 51.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\",le=\"0.5\"}": 51.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\",le=\"1\"}": 51.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\",le=\"2.5\"}": 56.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\",le=\"5\"}": 57.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\",le=\"10\"}": 57.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\",le=\"25\"}": 57.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\",le=\"60\"}": 57.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\",le=\"120\"}": 57.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\",le=\"300\"}": 57.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\",le=\"+Inf\"}": 57.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_sum{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\"}": 14.234492048999998,
+  "prometheus_remote_storage_sent_batch_duration_seconds_count{remote_name=\"f6ea4d\",url=\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\"}": 57.0
+ },
+ "cloud_end": {
+  "prometheus_remote_storage_exemplars_in_total": 0.0,
+  "prometheus_remote_storage_highest_timestamp_in_seconds": 1791320643.0,
+  "prometheus_remote_storage_histograms_in_total": 0.0,
+  "prometheus_remote_storage_samples_in_total": 342.0,
+  "prometheus_remote_storage_string_interner_zero_reference_releases_total": 0.0,
+  "prometheus_tsdb_head_out_of_order_samples_appended_total{type=\"float\"}": 0.0,
+  "prometheus_tsdb_head_out_of_order_samples_appended_total{type=\"histogram\"}": 0.0,
+  "prometheus_tsdb_head_samples_appended_total{type=\"float\"}": 342.0,
+  "prometheus_tsdb_head_samples_appended_total{type=\"histogram\"}": 0.0,
+  "prometheus_tsdb_out_of_bound_samples_total{type=\"float\"}": 0.0,
+  "prometheus_tsdb_out_of_order_samples_total{type=\"float\"}": 0.0,
+  "prometheus_tsdb_out_of_order_samples_total{type=\"histogram\"}": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_completed_pages_total": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_fsync_duration_seconds{quantile=\"0.5\"}": NaN,
+  "prometheus_tsdb_out_of_order_wbl_fsync_duration_seconds{quantile=\"0.9\"}": NaN,
+  "prometheus_tsdb_out_of_order_wbl_fsync_duration_seconds{quantile=\"0.99\"}": NaN,
+  "prometheus_tsdb_out_of_order_wbl_fsync_duration_seconds_sum": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_fsync_duration_seconds_count": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_page_flushes_total": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_record_part_writes_total": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_record_parts_bytes_written_total": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_segment_current": 1.0,
+  "prometheus_tsdb_out_of_order_wbl_storage_size_bytes": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_truncations_failed_total": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_truncations_total": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_writes_failed_total": 0.0
+ },
+ "cloud_log": "time=2026-10-06T21:01:22.720Z level=WARN source=main.go:1075 msg=\"Received an OS signal, exiting gracefully...\" signal=terminated",
+ "agent_log": "time=2026-10-06T21:01:26.514Z level=WARN source=queue_manager.go:2027 msg=\"Failed to send batch, retrying\" component=remote remote_name=f6ea4d url=http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write err=\"Post \\\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\\\": read tcp 172.22.0.5:46878->172.22.0.3:\ntime=2026-10-06T21:01:54.558Z level=WARN source=main.go:1075 msg=\"Received an OS signal, exiting gracefully...\" signal=terminated\ntime=2026-10-06T21:02:14.524Z level=WARN source=queue_manager.go:2027 msg=\"Failed to send batch, retrying\" component=remote remote_name=f6ea4d url=http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write err=\"Post \\\"http://bf-e5a-restart-tmpfs-tox:9091/api/v1/write\\\": read tcp 172.22.0.4:55408->172.22.0.3:"
+}

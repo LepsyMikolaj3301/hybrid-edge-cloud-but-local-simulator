@@ -1,0 +1,365 @@
+{
+ "gaps_rel_outage_begin_s": [],
+ "outage_len_s": 61.9,
+ "timeline_t_lag_pending": [
+  [
+   0,
+   0.0,
+   0.0
+  ],
+  [
+   5,
+   1791320398.0,
+   6.0
+  ],
+  [
+   10,
+   0.0,
+   0.0
+  ],
+  [
+   15,
+   2.0,
+   6.0
+  ],
+  [
+   20,
+   0.0,
+   0.0
+  ],
+  [
+   25,
+   2.0,
+   6.0
+  ],
+  [
+   30,
+   0.0,
+   0.0
+  ],
+  [
+   35,
+   2.0,
+   6.0
+  ],
+  [
+   40,
+   0.0,
+   0.0
+  ],
+  [
+   45,
+   2.0,
+   6.0
+  ],
+  [
+   50,
+   0.0,
+   0.0
+  ],
+  [
+   55,
+   2.0,
+   6.0
+  ],
+  [
+   60,
+   0.0,
+   0.0
+  ],
+  [
+   65,
+   2.0,
+   6.0
+  ],
+  [
+   70,
+   0.0,
+   0.0
+  ],
+  [
+   75,
+   2.0,
+   6.0
+  ],
+  [
+   80,
+   0.0,
+   0.0
+  ],
+  [
+   85,
+   2.0,
+   6.0
+  ],
+  [
+   92,
+   2.0,
+   6.0
+  ],
+  [
+   97,
+   8.0,
+   24.0
+  ],
+  [
+   102,
+   12.0,
+   36.0
+  ],
+  [
+   107,
+   18.0,
+   54.0
+  ],
+  [
+   112,
+   22.0,
+   66.0
+  ],
+  [
+   117,
+   28.0,
+   84.0
+  ],
+  [
+   122,
+   32.0,
+   96.0
+  ],
+  [
+   127,
+   38.0,
+   114.0
+  ],
+  [
+   132,
+   42.0,
+   126.0
+  ],
+  [
+   137,
+   48.0,
+   144.0
+  ],
+  [
+   142,
+   52.0,
+   156.0
+  ],
+  [
+   147,
+   58.0,
+   174.0
+  ],
+  [
+   154,
+   64.0,
+   192.0
+  ],
+  [
+   159,
+   0.0,
+   0.0
+  ],
+  [
+   164,
+   0.0,
+   0.0
+  ],
+  [
+   169,
+   0.0,
+   0.0
+  ],
+  [
+   174,
+   0.0,
+   0.0
+  ],
+  [
+   179,
+   0.0,
+   0.0
+  ],
+  [
+   184,
+   0.0,
+   0.0
+  ],
+  [
+   189,
+   0.0,
+   0.0
+  ],
+  [
+   194,
+   0.0,
+   0.0
+  ],
+  [
+   199,
+   0.0,
+   0.0
+  ],
+  [
+   204,
+   0.0,
+   0.0
+  ],
+  [
+   209,
+   0.0,
+   0.0
+  ],
+  [
+   214,
+   0.0,
+   0.0
+  ],
+  [
+   219,
+   0.0,
+   0.0
+  ],
+  [
+   224,
+   0.0,
+   0.0
+  ],
+  [
+   229,
+   0.0,
+   0.0
+  ],
+  [
+   234,
+   0.0,
+   0.0
+  ],
+  [
+   239,
+   0.0,
+   0.0
+  ],
+  [
+   244,
+   0.0,
+   0.0
+  ],
+  [
+   249,
+   0.0,
+   0.0
+  ]
+ ],
+ "name": "e1c-recreate-vol",
+ "params": {
+  "idx": "2",
+  "mode": "recreate"
+ },
+ "events": [
+  [
+   "start",
+   1791320393.762281
+  ],
+  [
+   "outage_begin",
+   1791320483.7691119
+  ],
+  [
+   "outage_end",
+   1791320545.6333594
+  ],
+  [
+   "measure",
+   1791320647.3260255
+  ]
+ ],
+ "samples_in_cloud": 124,
+ "first_sample_delay_vs_start_s": 4.724624872207642,
+ "raw_missing_scrapes_by_region": {
+  "pre": 0,
+  "outage": 0,
+  "post": 0
+ },
+ "max_gap_s": 0,
+ "qr_total_steps": 126,
+ "qr_missing_steps": 4,
+ "qr_missing_by_region": {
+  "pre": 4,
+  "outage": 0,
+  "post": 0
+ },
+ "agent_before_restore": {
+  "prometheus_agent_out_of_order_samples_total": 0.0,
+  "prometheus_remote_storage_highest_timestamp_in_seconds": 1791320544.0,
+  "prometheus_remote_storage_queue_highest_sent_timestamp_seconds{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\"}": 1791320482.0,
+  "prometheus_remote_storage_samples_failed_total{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\"}": 0.0,
+  "prometheus_remote_storage_samples_pending{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\"}": 186.0,
+  "prometheus_remote_storage_samples_retried_total{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\"}": 72.0,
+  "prometheus_remote_storage_samples_total{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\"}": 336.0,
+  "prometheus_remote_storage_shards{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\"}": 1.0,
+  "prometheus_remote_storage_shards_desired{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\"}": 0.0025851224165233315,
+  "prometheus_remote_storage_shards_max{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\"}": 50.0,
+  "prometheus_remote_storage_shards_min{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\"}": 1.0
+ },
+ "agent_end": {
+  "prometheus_agent_out_of_order_samples_total": 0.0,
+  "prometheus_remote_storage_highest_timestamp_in_seconds": 1791320646.0,
+  "prometheus_remote_storage_queue_highest_sent_timestamp_seconds{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\"}": 1791320644.0,
+  "prometheus_remote_storage_samples_failed_total{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\"}": 0.0,
+  "prometheus_remote_storage_samples_in_total": 750.0,
+  "prometheus_remote_storage_samples_pending{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\"}": 6.0,
+  "prometheus_remote_storage_samples_retried_total{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\"}": 78.0,
+  "prometheus_remote_storage_samples_total{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\"}": 822.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\",le=\"0.005\"}": 96.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\",le=\"0.01\"}": 96.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\",le=\"0.025\"}": 96.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\",le=\"0.05\"}": 96.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\",le=\"0.1\"}": 96.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\",le=\"0.25\"}": 96.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\",le=\"0.5\"}": 96.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\",le=\"1\"}": 96.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\",le=\"2.5\"}": 109.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\",le=\"5\"}": 118.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\",le=\"10\"}": 118.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\",le=\"25\"}": 118.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\",le=\"60\"}": 118.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\",le=\"120\"}": 118.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\",le=\"300\"}": 118.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_bucket{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\",le=\"+Inf\"}": 118.0,
+  "prometheus_remote_storage_sent_batch_duration_seconds_sum{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\"}": 59.07871317099998,
+  "prometheus_remote_storage_sent_batch_duration_seconds_count{remote_name=\"631858\",url=\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\"}": 118.0
+ },
+ "cloud_end": {
+  "prometheus_remote_storage_exemplars_in_total": 0.0,
+  "prometheus_remote_storage_highest_timestamp_in_seconds": 1791320644.0,
+  "prometheus_remote_storage_histograms_in_total": 0.0,
+  "prometheus_remote_storage_samples_in_total": 486.0,
+  "prometheus_remote_storage_string_interner_zero_reference_releases_total": 0.0,
+  "prometheus_tsdb_head_out_of_order_samples_appended_total{type=\"float\"}": 0.0,
+  "prometheus_tsdb_head_out_of_order_samples_appended_total{type=\"histogram\"}": 0.0,
+  "prometheus_tsdb_head_samples_appended_total{type=\"float\"}": 486.0,
+  "prometheus_tsdb_head_samples_appended_total{type=\"histogram\"}": 0.0,
+  "prometheus_tsdb_out_of_bound_samples_total{type=\"float\"}": 0.0,
+  "prometheus_tsdb_out_of_order_samples_total{type=\"float\"}": 0.0,
+  "prometheus_tsdb_out_of_order_samples_total{type=\"histogram\"}": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_completed_pages_total": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_fsync_duration_seconds{quantile=\"0.5\"}": NaN,
+  "prometheus_tsdb_out_of_order_wbl_fsync_duration_seconds{quantile=\"0.9\"}": NaN,
+  "prometheus_tsdb_out_of_order_wbl_fsync_duration_seconds{quantile=\"0.99\"}": NaN,
+  "prometheus_tsdb_out_of_order_wbl_fsync_duration_seconds_sum": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_fsync_duration_seconds_count": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_page_flushes_total": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_record_part_writes_total": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_record_parts_bytes_written_total": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_segment_current": 1.0,
+  "prometheus_tsdb_out_of_order_wbl_storage_size_bytes": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_truncations_failed_total": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_truncations_total": 0.0,
+  "prometheus_tsdb_out_of_order_wbl_writes_failed_total": 0.0
+ },
+ "cloud_log": "",
+ "agent_log": "time=2026-10-06T21:01:27.703Z level=WARN source=queue_manager.go:2027 msg=\"Failed to send batch, retrying\" component=remote remote_name=631858 url=http://bf-e1c-recreate-vol-tox:9091/api/v1/write err=\"Post \\\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\\\": read tcp 172.29.0.5:38048->172.29.0.3:90\ntime=2026-10-06T21:02:31.241Z level=WARN source=queue_manager.go:2027 msg=\"Failed to send batch, retrying\" component=remote remote_name=631858 url=http://bf-e1c-recreate-vol-tox:9091/api/v1/write err=\"Post \\\"http://bf-e1c-recreate-vol-tox:9091/api/v1/write\\\": read tcp 172.29.0.5:43060->172.29.0.3:90"
+}

@@ -1,0 +1,80 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: edge-link-config
+  namespace: edge
+  labels: {app: edge-link}
+data:
+  proxies.json: |
+    [
+      {
+        "name": "prometheus-cloud",
+        "listen": "0.0.0.0:9091",
+        "upstream": "prometheus-cloud.cloud.svc:9090",
+        "enabled": true
+      }
+    ]
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-link
+  namespace: edge
+  labels: {app: edge-link}
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: edge-link}
+  template:
+    metadata:
+      labels: {app: edge-link}
+    spec:
+      containers:
+        - name: toxiproxy
+          image: ghcr.io/shopify/toxiproxy:2.9.0
+          imagePullPolicy: IfNotPresent
+          command: ["/toxiproxy"]
+          args: ["-host=0.0.0.0", "-port=8474", "-config=/etc/toxiproxy/proxies.json"]
+          ports:
+            - {name: api, containerPort: 8474}
+            - {name: proxy, containerPort: 9091}
+          readinessProbe:
+            tcpSocket: {port: 8474}
+            periodSeconds: 5
+          livenessProbe:
+            tcpSocket: {port: 8474}
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          resources:
+            requests: {cpu: 50m, memory: 64Mi}
+            limits: {cpu: 200m, memory: 128Mi}
+          volumeMounts:
+            - {name: config, mountPath: /etc/toxiproxy}
+      volumes:
+        - name: config
+          configMap: {name: edge-link-config}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: edge-link
+  namespace: edge
+  labels: {app: edge-link}
+spec:
+  type: ClusterIP
+  selector: {app: edge-link}
+  ports:
+    - {name: proxy, port: 9091, targetPort: 9091}
+    - {name: api, port: 8474, targetPort: 8474}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: edge-link-api
+  namespace: edge
+  labels: {app: edge-link}
+spec:
+  type: NodePort
+  selector: {app: edge-link}
+  ports:
+    - {name: api, port: 8474, targetPort: 8474, nodePort: 30474}

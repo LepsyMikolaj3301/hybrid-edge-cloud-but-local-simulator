@@ -43,7 +43,7 @@ Images use fixed tags and `imagePullPolicy: IfNotPresent` (never `:latest`).
 
 ## Prometheus settings
 - Cloud: `--web.enable-remote-write-receiver --storage.tsdb.path=/prometheus`, `storage.tsdb.out_of_order_time_window: 1h`, data on a 1Gi PVC (k3d local-path) so scale-to-0 keeps history.
-- Edge agent: `--agent --storage.agent.path=/data` (emptyDir, so the WAL survives cloud outages while the pod runs). `remote_write` to `http://edge-link.edge.svc:9091/api/v1/write` with explicit `queue_config` (`max_backoff: 5s`, `batch_send_deadline: 1s`). Scrape interval 2 s.
+- Edge agent: `--agent --storage.agent.path=/data` (emptyDir). The WAL-based store-and-forward covers cloud and link outages while the agent keeps running. Per `spike/backfill/FINDINGS.md`, restarting the agent during an outage loses unsent data (even with a persistent WAL), so the demo must never restart `prometheus-edge`. The cloud out-of-order window is only a safety net; backfill does not depend on it. `remote_write` to `http://edge-link.edge.svc:9091/api/v1/write` with explicit `queue_config` (`max_backoff: 5s`, `batch_send_deadline: 1s`). Scrape interval 2 s.
 
 ## Host ports
 3000 (Grafana), 9090 (cloud Prometheus), 8000 (aggregator), 8080 (sim), 8474 (toxiproxy API). Traefik disabled.
