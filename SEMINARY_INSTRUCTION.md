@@ -93,22 +93,40 @@ rate(edge_aggregates_emitted_total[1m])
 
 Edge Prometheus runs in agent mode and has no query UI. To see the edge side, use `curl http://localhost:8000/metrics`.
 
+### Live watchers in the terminal
+
+These run until Ctrl+C and print one line per tick. Open each in its own terminal, or run `make watch-all` to get all four in a 2x2 tmux session (detach with `Ctrl+b d`; close with `tmux kill-session -t edge-watch`).
+
+| Script | What it shows |
+|---|---|
+| `watch/raw.sh` (`make watch-raw`) | The raw MQTT stream from the sensor: every 10th sample (`--every 1` shows all 100/s), anomalies (\|value\| > 3) in red, burst `CONTROL` messages in yellow |
+| `watch/edge.sh` (`make watch-edge`) | What the edge aggregator sees, from :8000/metrics: raw counter climbing about 100/s, a marker each time a 10 s aggregate is emitted, window mean/min/max/RMS, and `ALERT` 0/1. It keeps going when the link is down |
+| `watch/cloud.sh` (`make watch-cloud`) | What reached the cloud Prometheus: **age** of the newest edge sample (about 0-2 s when healthy, and it grows while data is not arriving), raw counter, raw rate, RMS, and alert. It prints `CLOUD PROMETHEUS DOWN` during the outage scenario |
+| `watch/link.sh` (`make watch-link`) | The link: Toxiproxy UP/DOWN and toxics, plus the edge agent's remote_write queue: samples sent (and per second), pending, retried, failed, and **behind** (seconds of data buffered at the edge that the cloud does not have yet) |
+
+Poll interval: `INTERVAL=1 watch/cloud.sh` (defaults: edge 1 s, cloud and link 2 s).
+
 ## 6. Run the demo scenarios
 
 Run these from the repository root with the stack up and Grafana open next to the terminal. Each script prints PASS or FAIL at the end.
 
 1. **Data reduction**: `./demo/01-data-reduction.sh`
    Watch "Raw samples vs aggregates" and "Data reduction ratio". Expect a ratio of about 1000.
+   Terminal: `watch/raw.sh` + `watch/edge.sh` (100 raw samples/s in, one aggregate every 10 s out).
 2. **Local alert**: `./demo/02-local-alert.sh`
    Injects an 8 s vibration burst. The edge raises the alert in about 0.2 s; the cloud sees it a second or two later. Watch "Alert state" and "Window RMS".
+   Terminal: `watch/raw.sh` (CONTROL line, red spikes), `watch/edge.sh` (ALERT 1 almost at once) and `watch/cloud.sh` (ALERT 1 a moment later).
 3. **Cloud outage and backfill**: `./demo/03-outage-backfill.sh`
    Shuts down the cloud Prometheus for 60 s, brings it back and checks for gaps. During the outage the cloud data looks missing; after recovery, **refresh the dashboard** and the gap is filled.
+   Terminal: `watch/cloud.sh` (DOWN, then back) + `watch/link.sh` (pending/retried/behind grow, then drain).
 4. **Latency (optional)**: `./demo/04-latency.sh`
    Adds 2 s latency to the link. The cloud alert lags; the edge alert does not. The script removes the latency when it exits.
+   Terminal: `watch/link.sh` (toxic `lat:latency` listed) + `watch/edge.sh` / `watch/cloud.sh` (edge alert first, cloud lags).
 5. **Manual link cut, for live narration**:
    - `./demo/05-link-down.sh`: the cloud series flatline, but http://localhost:8000/metrics keeps updating (the edge keeps working).
    - Wait 1 to 2 minutes while you explain.
    - `./demo/06-link-up.sh`: wait about 10 s, refresh Grafana, and the gap fills in.
+   - Terminal: `watch/link.sh` (DOWN, pending and behind growing; after link-up both drop to 0 and sent/s spikes as the backlog is replayed), `watch/cloud.sh` (age climbs, then drops back to about 0 s), and `watch/edge.sh` (keeps updating the whole time).
 
 You can also trigger a burst by hand:
 

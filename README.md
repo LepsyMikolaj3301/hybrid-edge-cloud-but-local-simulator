@@ -42,30 +42,32 @@ Grafana can be empty for about the first minute while data arrives. `demo/status
 
 Run these from the repository root with the stack up. Each script prints PASS or FAIL at the end. The numbers below are examples from single runs on one machine. They vary from run to run and are not guarantees.
 
+To watch values stream in a terminal while a scenario runs, use the live watchers in `watch/` (`make watch-all` opens all four in tmux). See `SEMINARY_INSTRUCTION.md`, section 5.
+
 ### 1. Data reduction: `./demo/01-data-reduction.sh`
 
 Shows that the cloud receives about one aggregate per 10 s instead of about 100 raw samples per second.
 In Grafana: "Raw samples vs aggregates" and "Data reduction ratio".
-Observed: raw rate about 95-100 samples/s measured directly (99.8/s on the aggregator). Reduction ratio observed 934 and 1134; about 1000 is expected for 100 Hz and a 10 s window. Right after startup the cloud query once showed 60.9/s for the raw rate. That is a `rate()` artifact and the dashboard settles. The script passes if the ratio is above 100.
+Observed: raw rate about 95-100 samples/s measured directly (99.8/s on the aggregator). Reduction ratio observed 934, 1134 and 967 on a warmed-up stack (raw 99.6/s, aggregate 0.103/s); about 1000 is expected for 100 Hz and a 10 s window. Measured right after startup the numbers are distorted by `rate()` (raw 27.8/s and ratio 1489 in one run, 60.9/s in another), so run this script after the stack has been up for a couple of minutes. The script passes if the ratio is above 100.
 
 ### 2. Local alert: `./demo/02-local-alert.sh`
 
 Injects a vibration burst (8 s, amplitude 8). The edge aggregator decides on a rolling 1 s RMS, with no cloud involved. The cloud sees the same alert only after scrape, remote_write and query delay.
 In Grafana: "Alert state" and "Window RMS".
-Observed: edge alert after 163 ms, cloud after 1674 ms. The script passes if the edge delay is under 1000 ms and the cloud sees the alert.
+Observed: edge alert after 107 ms, cloud after 611 ms (earlier run: 163 ms / 1674 ms). The script passes if the edge delay is under 1000 ms and the cloud sees the alert.
 
 ### 3. Cloud outage and backfill: `./demo/03-outage-backfill.sh`
 
 Scales `prometheus-cloud` to 0 for 60 s, brings it back, waits 30 s for the agent to flush, then checks the cloud for gaps (2 s steps with `count_over_time`). It also prints the agent's remote_write counters.
 In Grafana: the data may look missing or flat during the outage. Refresh the dashboard after recovery and the gap is filled.
-Observed: 61 two-second steps checked, 0 gaps in the outage window; the agent retried 1000 samples and failed 0.
+Observed: 61 two-second steps checked, 0 gaps in the outage window; the agent retried 9500 samples and failed 0. The script also reported 7 gaps 18-30 s before the outage window, from stack startup; they are outside the checked window.
 Do not restart the `prometheus-edge` pod during or around this scenario (see limitations).
 
 ### 4. Latency (optional): `./demo/04-latency.sh`
 
 Adds +2000 ms latency to the link (Toxiproxy, upstream direction), repeats the alert measurement, then removes the toxic when it exits.
 In Grafana: the cloud-side alert lags; the edge decision is unaffected.
-Observed: edge alert after 110 ms, cloud after 4642 ms.
+Observed: edge alert after 107 ms, cloud after 4629 ms (earlier run: 110 ms / 4642 ms).
 
 ### 5 and 6. Cut and restore the link: `./demo/05-link-down.sh`, `./demo/06-link-up.sh`
 

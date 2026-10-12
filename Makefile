@@ -1,7 +1,7 @@
 SHELL := /usr/bin/env bash
 export PATH := $(HOME)/.local/bin:$(PATH)
 
-.PHONY: up check-tools cluster build deploy wait test status demo-reduction demo-anomaly demo-outage demo-latency link-down link-up logs down
+.PHONY: up check-tools cluster build deploy wait test status demo-reduction demo-anomaly demo-outage demo-latency link-down link-up logs down watch-raw watch-edge watch-cloud watch-link watch-all
 
 up: check-tools cluster build deploy wait
 	@echo "Grafana: http://localhost:3000"
@@ -36,3 +36,13 @@ logs:
 	@kubectl --context k3d-edge-cloud -n edge logs -l app=edge-aggregator --tail=50 2>/dev/null || kubectl --context k3d-edge-cloud -n edge logs deploy/edge-aggregator --tail=50
 down:
 	@scripts/cluster-down.sh
+watch-raw:
+	@watch/raw.sh
+watch-edge:
+	@watch/edge.sh
+watch-cloud:
+	@watch/cloud.sh
+watch-link:
+	@watch/link.sh
+watch-all:
+	@watch/all.sh
